@@ -4,6 +4,7 @@ Getting Started
 To set up the project locally, follow these steps:
 
 Clone the repository.
+
 Install the dependencies using.
 
 npm install
