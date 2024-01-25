@@ -11,3 +11,348 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+/* Center charts with explicit width and heights */
+.ag-chart-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+button:not(
+    #myGrid button,
+    #myChart button,
+    button[class*="ag-"],
+    .ag-chart-context-menu button
+  ) {
+  --background-color: transparent;
+  --text-color: #212529;
+  --color-border-primary: #d0d5dd;
+  --hover-background-color: rgba(0, 0, 0, 0.1);
+
+  appearance: none;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 6px;
+  height: 36px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.375em 1em 0.5em;
+  white-space: nowrap;
+  margin-right: 6px;
+  margin-bottom: 8px;
+  transition: background-color 0.25s ease-in-out;
+}
+
+button:not(
+    #myGrid button,
+    #myChart button,
+    button[class*="ag-"],
+    .ag-chart-context-menu button
+  ):hover {
+  background-color: var(--hover-background-color);
+}
+
+:root[data-dark-mode="true"]
+  button:not(
+    #myGrid button,
+    #myChart button,
+    button[class*="ag-"],
+    .ag-chart-context-menu button
+  ) {
+  --text-color: #f8f9fa;
+  --color-border-primary: rgba(255, 255, 255, 0.2);
+  --hover-background-color: #2a343e;
+}
+
+/* ------------------- */
+
+.homeContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.homeContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.chartsContainer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 600px;
+}
+
+.pieChartBlock{
+  width: 50%;
+  max-height: 600px;
+}
+
+.lineChartBlock{
+  width: 50%;
+  max-height: 600px;
+}
+
+.studentTableContainer{
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.formInput{
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding: 0.375rem 0.75rem;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #321a50;
+    background: #f7f7f7;
+    background-clip: padding-box;
+    border-radius: 7px;
+    transition: all .15s ease-in-out;
+    border: 2px solid transparent;
+}
+
+
+.formInput:hover {
+    border: 2px solid;
+    color: #321a50;
+    background-color: #fff;
+    border-color: #321a50;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #c7b8da;
+}
+
+.joinerDetails{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.filterJoinerDate{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.selectedDateLabel{
+  font-size: 14px;
+  margin-left: 4px;
+  margin-bottom: 8px;
+}
+
+.resetBtn{
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+
+/* Student Page Info CSS */
+
+.studentInfoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.studentinfo{
+  /* background-color: #ccc; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.studentContainer{
+  background: linear-gradient(to right, #4ca2cd, #67B26F);
+  padding: 1rem 0;
+  height: 100vh;
+}
+
+.studentExportBtnContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.studentExport{
+  width: 945px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.studentPageTitle{
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card {
+  background-color: #f1f1f1c5;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.studentProfileCard{
+  width: 350px;
+  height: 350px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.studentImage{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 2.5rem;
+  border: 5px solid #ccc;
+}
+
+.studentName{
+  font-size: 20px;
+  font-weight: 600;
+  color: #544c4c;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.studentLinePartition{
+  border: 0.8px solid #ccc;
+  width: 100%;
+}
+
+.studentInfoContent{
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.studentGeneralInfoCard{
+  width: 500px;
+  height: 100%;
+  margin-bottom: 1.5rem;
+  padding: 16px;
+}
+
+.StudentCardInfoTitle{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.studentTableDetailsContainer{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.studentTableDetailsContent{
+  /* border: 1px solid #ccc; */
+}
+
+.studentTableRow{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.studentTableTitle{
+  border: 1px solid #b1a7a7;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 3px;
+  padding-left: 15px;
+  width: 180px;
+}
+
+.studentTableTitleData{
+  border: 1px solid #b1a7a7;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4f4a4a;
+  padding: 3px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.studentTableTitleSpacing{
+  border: 1px solid #b1a7a7;
+  padding: 1.7px 15px;
+  height: 100%;
+}
+
+.studentOtherInfoCard{
+  width: 500px;
+  height: 100%;
+  padding: 16px;
+}
+
+.studentDescriptionData{
+  font-size: 14px;
+  font-weight: 500;
+  color: #4f4a4a;
+  margin-top: 0.5rem;
+}
+
+/* --------- Header --------- */
+
+.header{
+  box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.10196);
+  border-bottom: 1px solid #d2d2d2;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.headerConatiner{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.headerTitle{
+  font-size: 24px;
+  font-weight: 700;
+  color: #3d3d3d;
+  text-transform: uppercase;
+}
+
+.goBack:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
